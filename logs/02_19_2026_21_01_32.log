@@ -1,0 +1,11 @@
+[ 2026-02-19 21:01:32,555 ] 21 root - INFO - Starting Data Ingestion from MySQL
+[ 2026-02-19 21:01:32,704 ] 149 mysql.connector - INFO - package: mysql.connector.plugins
+[ 2026-02-19 21:01:32,704 ] 150 mysql.connector - INFO - plugin_name: caching_sha2_password
+[ 2026-02-19 21:01:32,704 ] 154 mysql.connector - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+[ 2026-02-19 21:01:36,184 ] 36 root - INFO - Successfully read dataset from MySQL
+[ 2026-02-19 21:01:38,381 ] 45 root - INFO - Ingestion complete. Ready for transformation.
+[ 2026-02-19 21:01:40,002 ] 16 root - INFO - Object saved successfully at: artifacts\preprocessor.pkl
+[ 2026-02-19 21:01:40,014 ] 13 root - INFO - Splitting Training and Testing input data
+[ 2026-02-19 21:01:40,015 ] 31 root - INFO - Running Hyperparameter Optimization... please wait.
+[ 2026-02-19 21:02:30,934 ] 16 root - INFO - Object saved successfully at: artifacts\model.pkl
+[ 2026-02-19 21:02:30,934 ] 49 root - INFO - Training Complete! Final R2 Score: -0.004940922219106136

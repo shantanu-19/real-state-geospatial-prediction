@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  # MySQL Database Service
+  db:
+    image: mysql:8.0
+    container_name: mysql_db
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+      MYSQL_DATABASE: real_estate
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  # Streamlit Web Application Service
+  web:
+    build: 
+      context: .
+      dockerfile: deploy/Dockerfile
+    container_name: streamlit_app
+    restart: always
+    ports:
+      - "8501:8501"
+    environment:
+      - DB_HOST=db
+      - DB_PASSWORD=${DB_PASSWORD}
+    depends_on:
+      - db
+
+volumes:
+  mysql_data:

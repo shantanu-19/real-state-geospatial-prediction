@@ -1,0 +1,10 @@
+pandas
+numpy
+seaborn
+scikit-learn
+xgboost
+mysql-connector-python
+streamlit
+folium
+streamlit-folium
+python-dotenv

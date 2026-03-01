@@ -1,0 +1,15 @@
+[ 2026-02-19 19:22:03,803 ] 21 root - INFO - Entered the data ingestion component
+[ 2026-02-19 19:22:03,900 ] 26 root - INFO - Reading data from MySQL Database
+[ 2026-02-19 19:22:04,011 ] 149 mysql.connector - INFO - package: mysql.connector.plugins
+[ 2026-02-19 19:22:04,011 ] 150 mysql.connector - INFO - plugin_name: caching_sha2_password
+[ 2026-02-19 19:22:04,011 ] 154 mysql.connector - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+[ 2026-02-19 19:22:04,047 ] 35 root - INFO - Train test split initiated
+[ 2026-02-19 19:22:04,052 ] 41 root - INFO - Ingestion of data is completed
+[ 2026-02-19 19:22:04,055 ] 70 root - INFO - Read train and test data completed
+[ 2026-02-19 19:22:04,055 ] 49 root - INFO - Categorical columns: ['locality_name', 'city']
+[ 2026-02-19 19:22:04,056 ] 50 root - INFO - Numerical columns: ['area_sqft', 'bhk_count']
+[ 2026-02-19 19:22:04,057 ] 82 root - INFO - Applying preprocessing object on training and testing dataframes.
+[ 2026-02-19 19:22:04,075 ] 20 root - INFO - Splitting training and test input data
+[ 2026-02-19 19:22:04,151 ] 34 root - INFO - Model R2 Score: -2.9305133946570097
+[ 2026-02-19 19:22:04,151 ] 40 root - INFO - Best found model on both training and testing dataset
+[ 2026-02-19 19:22:04,156 ] 16 root - INFO - Object saved successfully at: artifacts\model.pkl

@@ -1,0 +1,2 @@
+[ 2026-02-19 20:29:49,911 ] 21 root - INFO - Starting Final Robust Data Ingestion
+[ 2026-02-19 20:29:50,358 ] 28 root - INFO - Standardized Headers: ['id', 'state', 'city', 'locality', 'propertytype', 'bhk', 'sizeinsqft', 'priceinlakhs', 'pricepersqft', 'yearbuilt', 'furnishedstatus', 'floorno', 'totalfloors', 'ageofproperty', 'nearbyschools', 'nearbyhospitals', 'publictransportaccessibility', 'parkingspace', 'security', 'amenities', 'facing', 'ownertype', 'availabilitystatus']

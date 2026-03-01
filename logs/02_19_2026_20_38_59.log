@@ -1,0 +1,10 @@
+[ 2026-02-19 20:38:59,784 ] 22 root - INFO - Starting Expanded Data Ingestion from MySQL
+[ 2026-02-19 20:38:59,904 ] 149 mysql.connector - INFO - package: mysql.connector.plugins
+[ 2026-02-19 20:38:59,904 ] 150 mysql.connector - INFO - plugin_name: caching_sha2_password
+[ 2026-02-19 20:38:59,904 ] 154 mysql.connector - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+[ 2026-02-19 20:39:02,493 ] 43 root - INFO - Successfully read expanded dataset into DataFrame
+[ 2026-02-19 20:39:03,075 ] 51 root - INFO - Splitting data into train and test sets
+[ 2026-02-19 20:39:03,806 ] 58 root - INFO - Data Ingestion, splitting, and local saving complete
+[ 2026-02-19 20:39:04,724 ] 16 root - INFO - Object saved successfully at: artifacts\preprocessor.pkl
+[ 2026-02-19 20:39:04,729 ] 33 root - INFO - Starting GridSearchCV for Pan-India Data
+[ 2026-02-19 20:39:32,118 ] 16 root - INFO - Object saved successfully at: artifacts\model.pkl

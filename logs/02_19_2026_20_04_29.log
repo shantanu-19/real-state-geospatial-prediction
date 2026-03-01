@@ -1,0 +1,4 @@
+[ 2026-02-19 20:04:29,459 ] 21 root - INFO - Entered the data ingestion component
+[ 2026-02-19 20:04:29,571 ] 149 mysql.connector - INFO - package: mysql.connector.plugins
+[ 2026-02-19 20:04:29,571 ] 150 mysql.connector - INFO - plugin_name: caching_sha2_password
+[ 2026-02-19 20:04:29,571 ] 154 mysql.connector - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin

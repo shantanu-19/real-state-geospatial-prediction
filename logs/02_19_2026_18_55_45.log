@@ -1,0 +1,15 @@
+[ 2026-02-19 18:55:45,779 ] 25 root - INFO - Entered the data ingestion component
+[ 2026-02-19 18:55:45,874 ] 149 mysql.connector - INFO - package: mysql.connector.plugins
+[ 2026-02-19 18:55:45,875 ] 150 mysql.connector - INFO - plugin_name: caching_sha2_password
+[ 2026-02-19 18:55:45,875 ] 154 mysql.connector - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+[ 2026-02-19 18:55:45,877 ] 36 root - INFO - Reading data from MySQL Database
+[ 2026-02-19 18:55:46,102 ] 48 root - INFO - Train test split initiated
+[ 2026-02-19 18:55:46,114 ] 54 root - INFO - Ingestion of data is completed
+[ 2026-02-19 18:55:46,120 ] 70 root - INFO - Read train and test data completed
+[ 2026-02-19 18:55:46,121 ] 49 root - INFO - Categorical columns: ['locality_name', 'city']
+[ 2026-02-19 18:55:46,121 ] 50 root - INFO - Numerical columns: ['area_sqft', 'bhk_count']
+[ 2026-02-19 18:55:46,127 ] 82 root - INFO - Applying preprocessing object on training and testing dataframes.
+[ 2026-02-19 18:55:46,155 ] 26 root - INFO - Splitting training and test input data
+[ 2026-02-19 18:55:46,156 ] 47 root - INFO - Fitting the XGBoost model on training data
+[ 2026-02-19 18:55:47,084 ] 50 root - INFO - Evaluating model performance on test data
+[ 2026-02-19 18:55:47,092 ] 26 root - INFO - An error occurred in the training pipeline

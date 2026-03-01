@@ -1,0 +1,11 @@
+[ 2026-02-19 19:46:25,572 ] 21 root - INFO - Entered the data ingestion component
+[ 2026-02-19 19:46:25,658 ] 26 root - INFO - Reading data from MySQL Database
+[ 2026-02-19 19:46:25,892 ] 149 mysql.connector - INFO - package: mysql.connector.plugins
+[ 2026-02-19 19:46:25,892 ] 150 mysql.connector - INFO - plugin_name: caching_sha2_password
+[ 2026-02-19 19:46:25,893 ] 154 mysql.connector - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+[ 2026-02-19 19:46:25,951 ] 35 root - INFO - Train test split initiated
+[ 2026-02-19 19:46:25,969 ] 41 root - INFO - Ingestion of data is completed
+[ 2026-02-19 19:46:25,981 ] 59 root - INFO - Read train and test data completed
+[ 2026-02-19 19:46:25,981 ] 41 root - INFO - Categorical columns: ['locality_name', 'city']
+[ 2026-02-19 19:46:25,981 ] 42 root - INFO - Numerical columns: ['area_sqft', 'bhk_count', 'latitude', 'longitude']
+[ 2026-02-19 19:46:25,989 ] 71 root - INFO - Applying Target Encoding and Scaling.

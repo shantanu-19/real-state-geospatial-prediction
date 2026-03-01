@@ -1,0 +1,8 @@
+[ 2026-02-19 21:12:34,950 ] 21 root - INFO - Starting Data Ingestion from MySQL
+[ 2026-02-19 21:12:35,103 ] 149 mysql.connector - INFO - package: mysql.connector.plugins
+[ 2026-02-19 21:12:35,103 ] 150 mysql.connector - INFO - plugin_name: caching_sha2_password
+[ 2026-02-19 21:12:35,103 ] 154 mysql.connector - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+[ 2026-02-19 21:12:42,261 ] 36 root - INFO - Successfully read dataset from MySQL
+[ 2026-02-19 21:12:46,749 ] 45 root - INFO - Ingestion complete. Ready for transformation.
+[ 2026-02-19 21:12:49,390 ] 16 root - INFO - Object saved successfully at: artifacts\preprocessor.pkl
+[ 2026-02-19 21:12:56,566 ] 16 root - INFO - Object saved successfully at: artifacts\model.pkl

@@ -1,0 +1,6 @@
+[ 2026-02-19 18:54:27,292 ] 25 root - INFO - Entered the data ingestion component
+[ 2026-02-19 18:54:27,384 ] 149 mysql.connector - INFO - package: mysql.connector.plugins
+[ 2026-02-19 18:54:27,385 ] 150 mysql.connector - INFO - plugin_name: caching_sha2_password
+[ 2026-02-19 18:54:27,385 ] 154 mysql.connector - INFO - AUTHENTICATION_PLUGIN_CLASS: MySQLCachingSHA2PasswordAuthPlugin
+[ 2026-02-19 18:54:27,389 ] 36 root - INFO - Reading data from MySQL Database
+[ 2026-02-19 18:54:36,134 ] 26 root - INFO - An error occurred in the training pipeline
