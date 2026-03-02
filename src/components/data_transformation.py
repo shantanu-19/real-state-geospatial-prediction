@@ -13,11 +13,23 @@ from src.utils.main_utils import save_object
 class DataTransformation:
     def get_transformer_object(self):
         try:
-            # Defining columns for the 10-feature model
-            num_columns = ["area_sqft", "bhk_count", "age"]
+            # Matches the 12-column structure (9 original + 3 investment features)
+            num_columns = [
+                "Size_in_SqFt", 
+                "BHK", 
+                "Age_of_Property",
+                "metro_proximity_km", 
+                "school_rating", 
+                "future_infra_score"
+            ]
+            
             cat_columns = [
-                "locality_name", "city", "state", 
-                "property_type", "furnished_status", "availability_status"
+                "Locality", 
+                "City", 
+                "State", 
+                "Property_Type", 
+                "Furnished_Status", 
+                "Availability_Status"
             ]
 
             num_pipeline = Pipeline(steps=[
@@ -26,7 +38,7 @@ class DataTransformation:
             ])
 
             cat_pipeline = Pipeline(steps=[
-                ("target_encoder", TargetEncoder()), # Secret to high R2
+                ("target_encoder", TargetEncoder()), # Essential for high-cardinality localities
                 ("imputer", SimpleImputer(strategy="most_frequent")),
                 ("scaler", StandardScaler())
             ])
@@ -44,22 +56,29 @@ class DataTransformation:
             test_df = pd.read_csv(test_path)
 
             preprocessing_obj = self.get_transformer_object()
-            target_col = "price_total"
+            
+            # Target column name must match your enhanced CSV
+            target_col = "Price_in_Lakhs"
 
             X_train = train_df.drop(columns=[target_col], axis=1)
             y_train = train_df[target_col]
             X_test = test_df.drop(columns=[target_col], axis=1)
             y_test = test_df[target_col]
 
-            # Fit and Transform (TargetEncoder needs 'y' for fit)
+            # Fit and Transform
+            # Note: TargetEncoder requires 'y_train' to map categories to price means
             X_train_arr = preprocessing_obj.fit_transform(X_train, y_train)
             X_test_arr = preprocessing_obj.transform(X_test)
 
             train_arr = np.c_[X_train_arr, np.array(y_train)]
             test_arr = np.c_[X_test_arr, np.array(y_test)]
 
-            save_object(file_path=os.path.join('artifacts', "preprocessor.pkl"), obj=preprocessing_obj)
-            return train_arr, test_arr, "artifacts/preprocessor.pkl"
+            save_object(
+                file_path=os.path.join('artifacts', "preprocessor.pkl"),
+                obj=preprocessing_obj
+            )
+            
+            return train_arr, test_arr, os.path.join('artifacts', "preprocessor.pkl")
             
         except Exception as e:
             raise CustomException(e, sys)

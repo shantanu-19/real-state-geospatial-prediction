@@ -1,5 +1,6 @@
-database_reset.py
 .env
-artifacts/
+database_reset.py
+artifacts/*.csv
+artifacts/*.pkl
 __pycache__/
-*.pkl
+*.pyc
