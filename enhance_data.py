@@ -10,13 +10,13 @@ def fix_data_logic():
     prop_multipliers = {'Villa': 1.6, 'Independent House': 1.3, 'Apartment': 1.0}
     
     # 2. FEATURE ENGINEERING: NEW INVESTMENT SIGNALS
-    # We simulate these to give the model "intelligence"
+   
     df['metro_proximity_km'] = np.random.uniform(0.2, 5.0, len(df))
     df['school_rating'] = np.random.randint(1, 11, len(df))
     df['crime_rate_index'] = np.random.uniform(0.01, 0.08, len(df))
     df['future_infra_score'] = np.random.uniform(0.5, 1.0, len(df)) # Upcoming projects impact
 
-    # 3. REALISTIC PRICE CALCULATION (Model "Brain" starts here)
+    # 3. REALISTIC PRICE CALCULATION 
     def calculate_investment_price(row):
         # Base Price from Size and City
         base = row['Size_in_SqFt'] * city_rates.get(row['City'], 0.1)
